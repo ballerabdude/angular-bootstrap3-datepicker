@@ -33,17 +33,7 @@ dp.directive('ngBs3Datepicker', function($compile) {
       $scope.$watch(attr.language, function(value) {
         var language;
         language = value ? value : input.attr('language');
-        return input.datetimepicker({
-          language: language,
-          pickTime: false,
-          format: dateFormat,
-          icons: {
-            time: 'fa fa-clock-o',
-            date: 'fa fa-calendar',
-            up: 'fa fa-arrow-up',
-            down: 'fa fa-arrow-down'
-          }
-        });
+        return input.datetimepicker();
       });
       element.find('.input-group-addon').on('click', function(e) {
         return element.find('input').focus();

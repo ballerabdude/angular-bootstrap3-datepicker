@@ -32,14 +32,6 @@ dp.directive 'ngBs3Datepicker', ($compile)->
     $scope.$watch attr.language, (value)->
       language = if value then value else input.attr('language')
       input.datetimepicker(
-        language: language
-        pickTime: false
-        format: dateFormat
-        icons:
-            time: 'fa fa-clock-o'
-            date: 'fa fa-calendar'
-            up: 'fa fa-arrow-up'
-            down: 'fa fa-arrow-down'
       )
 
     #allow addon to be click in place of the input itself
